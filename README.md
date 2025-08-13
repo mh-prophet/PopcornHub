@@ -15,57 +15,59 @@ It follows a **Modular MVVM architecture** for scalability and maintainability.
 
 ---
 
-## 📂 Folder Structure
+<details>
+<summary>📂 Folder Structure</summary>
 
+```plaintext
 PopcornHub/
 │
-├── App/ # Application entry point, assets, and persistence
-│ ├── PopcornHubApp.swift
-│ ├── Assets.xcassets/
-│ ├── PopcornHub.xcdatamodeld/
-│ └── PersistenceController.swift
+├── App/                         # Application entry point, assets, and persistence
+│   ├── PopcornHubApp.swift
+│   ├── Assets.xcassets/
+│   ├── PopcornHub.xcdatamodeld/
+│   └── PersistenceController.swift
 │
-├── Data/ # Data layer - API, repositories, entities
-│ ├── API/
-│ │ ├── APIClient.swift
-│ │ ├── Endpoints.swift
-│ │ └── RequestBuilder.swift
-│ ├── Repositories/
-│ │ └── MovieRepository.swift
-│ ├── Entities/
-│ │ └── MovieEntity.swift
+├── Data/                        # Data layer - API, repositories, entities
+│   ├── API/
+│   │   ├── APIClient.swift
+│   │   ├── Endpoints.swift
+│   │   └── RequestBuilder.swift
+│   ├── Repositories/
+│   │   └── MovieRepository.swift
+│   ├── Entities/
+│   │   └── MovieEntity.swift
 │
-├── Domain/ # Business logic - models, RepoImplementations/Usecases, utils
-│ ├── Repositories/
-│ │ └── MovieRepositoryImpl.swift
-│ ├── Models.swift
-│ ├── Secrets.swift
+├── Domain/                      # Business logic - models, repo implementations, utils
+│   ├── Repositories/
+│   │   └── MovieRepositoryImpl.swift
+│   ├── Models.swift
+│   └── Secrets.swift
 │
-├── Presentation/ # UI layer - SwiftUI views, view models, components
-│ ├── Modules/
-│ │ ├── Home/
-│ │ │ ├── HomeView.swift
-│ │ │ └── HomeViewModel.swift
-│ │ ├── MovieDetail/
-│ │ │ ├── MovieDetailView.swift
-│ │ │ └── MovieDetailViewModel.swift
-│ │ └── Shared/
-│ │ └── Components/
-│ │ ├── MovieGridItemView.swift
-│ │ └── MovieGridView.swift
-│ │ └── PosterPlaceholderView.swift
+├── Presentation/                # UI layer - SwiftUI views, view models, components
+│   ├── Modules/
+│   │   ├── Home/
+│   │   │   ├── HomeView.swift
+│   │   │   └── HomeViewModel.swift
+│   │   ├── MovieDetail/
+│   │   │   ├── MovieDetailView.swift
+│   │   │   └── MovieDetailViewModel.swift
+│   │   └── Shared/
+│   │       └── Components/
+│   │           ├── MovieGridItemView.swift
+│   │           ├── MovieGridView.swift
+│   │           └── PosterPlaceholderView.swift
 │
-├── PopcornHubTests/ # Unit tests
-│ ├── Domain
-│   └── ModelTests.swift
-├── Data
-│   └── RepositoryTests.swift
-├── Presentation
-│   ├── HomeViewModelTests.swift
-│   └── MovieDetailViewModelTests.swift
-├── Mocks
-│   └── TestDoubles.swift # All Mocks
-
+├── PopcornHubTests/              # Unit tests
+│   ├── Domain/
+│   │   └── ModelTests.swift
+│   ├── Data/
+│   │   └── RepositoryTests.swift
+│   ├── Presentation/
+│   │   ├── HomeViewModelTests.swift
+│   │   └── MovieDetailViewModelTests.swift
+│   └── Mocks/
+│       └── TestDoubles.swift     # All mocks
+</details> ```
 ---
 
 ## 🛠 Tech Stack
@@ -83,7 +85,7 @@ PopcornHub/
    cd PopcornHub
 Open the .xcodeproj file in Xcode
 Add your API key in Secrets.swift
-Build & run the project on an iOS Simulator or device
+Build & run the project on an iOS Simulator or device.
 **Sometimes TMDB API doesn't respond, Please try with VPN in that case.**
 
 ### Running Tests
